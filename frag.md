@@ -91,3 +91,11 @@ Type key:
 |  Z   | String. Whitespace not allowed |
 |  H   | Byte array in Hex format  |
 |  B   | Integer or numeric array |
+
+# Recommended practice for the fragment format
+
+This section describes the recommended best practice for representing data in the fragment format.
+
+1. The `#HD` header line should be present, with the `SO` tag specified  
+2. The `#SQ` header lines should be present  
+3. One or more `#PG` header lines should be present  
