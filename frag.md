@@ -99,3 +99,5 @@ This section describes the recommended best practice for representing data in th
 1. The `#HD` header line should be present, with the `SO` tag specified  
 2. The `#SQ` header lines should be present  
 3. One or more `#PG` header lines should be present  
+
+The file should be coordinate-sorted and block-gzipped to allow rapid position-based querying of the file, using an index generated with [tabix](http://www.htslib.org/doc/tabix.html).
