@@ -3,7 +3,7 @@
 **Version**: 0.1  
 **Date last updated**: 2022-03-24
 
-The fragment file (.frag) is a tab-delimited text file consisting of a header section and a fragment record section. The fragment format was originally introduced by 10x Genomics through their `cellranger-atac` software, and is commonly used in the storage and analysis of single-cell chromatin data.
+The fragment file (.frag) is a tab-delimited text file consisting of a header section and a fragment record section. The fragment format was originally introduced by 10x Genomics through their `cellranger-atac` software, and is commonly used in the storage and analysis of single-cell chromatin data. **Note that the file format described here differs from the format currently used by 10x Genomics**.
 
 Header lines start with the `#` character, while fragment records do not. Each fragment record has 6 mandatory fields. The fragment file is similar to the BED format, but contains a defined header format and may contain additional fields.
 
