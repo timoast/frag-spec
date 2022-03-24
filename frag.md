@@ -28,7 +28,7 @@ Attributes:
 
 ### SQ tag
 
-This describes the reference sequence dictionary. The order of `#SQ` lines defines the fragment sorting order for coordinate-sorted files.
+This describes the reference sequence dictionary.
 
 Attributes:
 
