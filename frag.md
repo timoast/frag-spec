@@ -11,7 +11,7 @@ Header lines start with the `#` character, while fragment records do not. Each f
 
 The specification of the fragment file header was heavily influenced by the [SAM format specification](https://samtools.github.io/hts-specs/SAMv1.pdf).
 
-The fragment file header is an optional section. If present, each header line must start with a `#` character, and fragment records must not start with a `#` character. 
+The fragment file header is an optional section. If present, each header line must start with a `#` character, and fragment records must not start with a `#` character. In the header, each line is TAB-delimited and, apart from `#CO` lines, each data field follows a format `TAG:VALUE` where `TAG` is a two-character string that defines the format and content of `VALUE`. Within each (non-`#CO`) header line, no field tag may appear more than once and the order in which the fields appear is not significant
 
 The following tables describe the header record types that may be used. Tags listed with `*` are required. New header tags can be freely added for further data fields.
 
@@ -28,7 +28,7 @@ Attributes:
 
 ### SQ tag
 
-This describes the reference sequence dictionary.
+This describes the reference sequence dictionary. There may be multiple `#SQ` tags.
 
 Attributes:
 
@@ -46,7 +46,7 @@ Attributes:
 
 ### PG tag
 
-This describes information about programs run on the fragment file.
+This describes information about programs run on the fragment file. There may be multiple `#PG` tags.
 
 Attributes:
 
