@@ -23,8 +23,8 @@ Attributes:
 
 | Tag | Description |
 | --- | ----------- |
-| VN\* | File format version |
-| SO | Sorting order of fragment entries. Valid values: `unknown` (default), `unsorted`, `coordinate`, `barcode` |
+| VN\* | File format version. Type: string |
+| SO | Sorting order of fragment entries. Type: string. Valid values: `unknown` (default), `unsorted`, `coordinate`, `barcode` |
 
 ### SQ tag
 
@@ -34,15 +34,15 @@ Attributes:
 
 | Tag | Description |
 | --- | ----------- |
-| SN\*  | Reference sequence name. All Reference sequence names must be distinct. The value in this field is used in the fragment records in the RNAME field |
-| LN\*  | Reference sequence length |
+| SN\*  | Reference sequence name. All Reference sequence names must be distinct. The value in this field is used in the fragment records in the RNAME field. Type: string |
+| LN\*  | Reference sequence length. Type: integer |
 | AN  | Alternative reference sequence names. A comma-separated list of alternative names that tools may use when referring to this reference sequence |
-| AS  | Genome assembly identifier |
-| DS  | Description |
-| M5  | MD5 checksum of the sequence |
-| SP  | Species |
-| TP  | Molecule topology. Valid values: `linear`, `circular` |
-| UR  | URI of the sequence. This value may start with one of the standard protocols, eg 'https' or 'ftp'. If it does not start with one of these protocols, it is assumed to be a local path |
+| AS  | Genome assembly identifier. Type: string |
+| DS  | Description. Type: string |
+| M5  | MD5 checksum of the sequence. Type: string |
+| SP  | Species. Type: string |
+| TP  | Molecule topology. Type: string. Valid values: `linear`, `circular` |
+| UR  | URI of the sequence. This value may start with one of the standard protocols, eg 'https' or 'ftp'. If it does not start with one of these protocols, it is assumed to be a local path. Type: string |
 
 ### PG tag
 
@@ -52,12 +52,12 @@ Attributes:
 
 | Tag | Description |
 | --- | ----------- |
-| ID\*  | Program record identifier. Each #PG line must have a unique ID |
-| PN  | Program name |
-| CL  | Command line |
-| PP  | Previous `#PG-ID`. Must match another `#PG` header’s ID tag |
-| DS  | Description |
-| VN  | Program version |
+| ID\*  | Program record identifier. Each `#PG` line must have a unique ID. Type: string |
+| PN  | Program name. Type: string |
+| CL  | Command line. Type: string |
+| PP  | Previous `#PG-ID`. Must match another `#PG` header’s ID tag. Type: string |
+| DS  | Description. Type: string |
+| VN  | Program version. Type: string |
 
 
 ### CO tag
